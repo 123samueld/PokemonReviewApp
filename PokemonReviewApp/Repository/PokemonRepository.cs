@@ -62,6 +62,13 @@
             return _context.Pokemons.OrderBy(p => p.Id).ToList();
         }
 
+        public Pokemon GetPokemonTrimToUpper(PokemonDto pokemonCreate)
+        {
+            return GetPokemons()
+                .Where(c => c.Name.Trim().ToUpper() == pokemonCreate.Name.Trim().ToUpper())
+                .FirstOrDefault();
+        }
+
         public bool PokemonExists(int pokemonId)
         {
             return _context.Pokemons.Any(p => p.Id == pokemonId);

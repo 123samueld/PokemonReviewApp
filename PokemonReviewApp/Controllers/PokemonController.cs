@@ -5,22 +5,16 @@
     public class PokemonController : ControllerBase
     {
         private readonly IPokemonRepository _pokemonRepository;
-        private readonly IOwnerRepository _ownerRepository;
         private readonly IReviewRepository _reviewRepository;
-        private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
 
         public PokemonController(
             IPokemonRepository pokemonRepository,
-            IOwnerRepository ownerRepository, 
             IReviewRepository reviewRepository,
-            ICategoryRepository categoryRepository,
             IMapper mapper)
         {
             _pokemonRepository = pokemonRepository;
-            _ownerRepository = ownerRepository;
             _reviewRepository = reviewRepository;
-            _categoryRepository = categoryRepository;
             _mapper = mapper;
         }
 

@@ -5,6 +5,7 @@
         ICollection<Pokemon> GetPokemons();
         Pokemon GetPokemon(int id);
         Pokemon GetPokemon(string name);
+        Pokemon GetPokemonTrimToUpper(PokemonDto pokemonCreate);
         decimal GetPokemonRating(int id);
         bool PokemonExists(int pokemonId);
         bool CreatePokemon(int ownerId, int categoryId, Pokemon pokemon);
